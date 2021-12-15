@@ -42,12 +42,45 @@ console.log(typeof(answers));
 //Раздел 8
 
 
-let incr = 10,
-    decr = 10,
-    incr1 = 10,
-    decr1 = 10;
+// let incr = 10,
+//     decr = 10,
+//     incr1 = 10,
+//     decr1 = 10;
 
-console.log(++incr1);
-console.log(--decr1);
-console.log(incr++);
-console.log(decr--);
+// console.log(++incr1);
+// console.log(--decr1);
+// console.log(incr++);
+// console.log(decr--);
+
+// const num = 50;
+// switch (num) {
+//     case 49:
+//         console.log('Неверно');
+//         break;
+//     case 100:
+//         console.log('Неверно');
+//         break;
+//     case 50:
+//         console.log('В точку!');
+//         break;
+//     default:
+//         console.log('Не в этот раз');
+//         break;
+// }
+
+
+let num = 50;
+
+while(num < 50) {
+    console.log(num);
+    num++;
+}
+
+for (let i = 1; i < 0; i++) {
+    console.log(i);
+    if (i === 6) {
+        break;
+  //      continue; оператор позволяет пропустить шаг и двигаться
+  //      по циклу дальше
+    }
+}
