@@ -84,3 +84,9 @@ for (let i = 1; i < 0; i++) {
   //      по циклу дальше
     }
 }
+
+function showFrirstMessage(text){
+    console.log(text);
+}
+
+showFrirstMessage('Hello world');
