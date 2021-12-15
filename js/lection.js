@@ -69,24 +69,37 @@ console.log(typeof(answers));
 // }
 
 
-let num = 50;
+//let num = 50;
 
-while(num < 50) {
-    console.log(num);
-    num++;
-}
+//while(num < 50) {
+//    console.log(num);
+//    num++;
+//}
 
-for (let i = 1; i < 0; i++) {
-    console.log(i);
-    if (i === 6) {
-        break;
+//for (let i = 1; i < 0; i++) {
+//    console.log(i);
+//    if (i === 6) {
+//        break;
   //      continue; оператор позволяет пропустить шаг и двигаться
   //      по циклу дальше
-    }
-}
+//    }
+//}
 
-function showFrirstMessage(text){
-    console.log(text);
-}
+//function showFrirstMessage(text){
+//    console.log(text);
+//}
 
-showFrirstMessage('Hello world');
+//showFrirstMessage('Hello world');
+
+//немного о методах для работы со строками
+const logg = 'Hello world';
+console.log(logg.slice(1, 6));
+console.log(logg.substring(6, 11));
+console.log(logg.substr(6, 5));
+
+const num = 12.2;
+console.log(Math.round(num));
+
+const test = '12.2px';
+console.log(Math.parseInt(test));
+console.log(Math.parseFloat(test));
