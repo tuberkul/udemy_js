@@ -168,3 +168,35 @@ console.log(typeof(answers));
 
 //console.log(border);
 
+//массивы
+
+//const arr = [1, 12, 63, 6, 8];
+//arr.sort(compairNum);
+//console.log(arr);
+
+//function compairNum(a, b){
+//  return a - b;
+//}
+//arr.pop();//метод удаления последнего элемента массива
+//arr.push(10);//метод добавления в конец массива элемента
+
+//for (let i = 0; i < arr.length; i++){
+//  console.log(arr[i]);
+//} //цикл перебора массива
+
+//for(let value of arr) {
+//  console.log(value);
+//} //так же цикл перебора массива, но с помощью цикла for of
+    //но есть один плюс: возможность использовать break и continue
+//arr[99] = 0;
+//console.log(arr.length);
+
+//arr.forEach(function(item, i, arr){
+//    console.log(`${i}: ${item} внутри массива ${arr}`);
+//}); // обычно используется программистами
+
+//const str = prompt('', '');
+//const products = str.split(', ');
+//products.sort();
+//console.log(products.join('; '));
+
