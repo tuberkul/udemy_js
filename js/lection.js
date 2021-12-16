@@ -92,14 +92,42 @@ console.log(typeof(answers));
 //showFrirstMessage('Hello world');
 
 //немного о методах для работы со строками
-const logg = 'Hello world';
-console.log(logg.slice(1, 6));
-console.log(logg.substring(6, 11));
-console.log(logg.substr(6, 5));
+// const logg = 'Hello world';
+// console.log(logg.slice(1, 6));
+// console.log(logg.substring(6, 11));
+// console.log(logg.substr(6, 5));
 
-const num = 12.2;
-console.log(Math.round(num));
+// const num = 12.2;
+// console.log(Math.round(num));
 
-const test = '12.2px';
-console.log(Math.parseInt(test));
-console.log(Math.parseFloat(test));
+// const test = '12.2px';
+// console.log(Math.parseInt(test));
+// console.log(Math.parseFloat(test));
+
+//callback - функции
+
+// function first() {
+//   //Do something
+//   setTimeout(function() {
+//     console.log(1);
+//   }, 500);
+// }
+
+// function second() {
+//   console.log(2);
+// }
+
+// first();
+// second();
+
+// function LearnJS(lang, callback){
+//   console.log(`Я учу: ${lang}`);
+//   callback();
+// }
+
+// function done(){
+//   console.log('Я прошел этот урок!');
+// }
+
+// LearnJS('JavaScript', done);
+
