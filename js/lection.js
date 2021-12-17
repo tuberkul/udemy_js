@@ -1,4 +1,4 @@
-"use strict";
+//"use strict";
 /*
 let number = 4.6; //это числовой тип данных
 
@@ -220,81 +220,103 @@ console.log(typeof(answers));
 // console.log(copy);
 // console.log(obj);
 
-function copy(mainObj) {
-  let objCopy = {};
+// function copy(mainObj) {
+//   let objCopy = {};
 
-  let key;
-  for (key in mainObj){
-    objCopy[key] = mainObj[key];
+//   let key;
+//   for (key in mainObj){
+//     objCopy[key] = mainObj[key];
+//   }
+
+//   return objCopy;
+// }
+
+// const numbers = {
+//   a: 2,
+//   b: 5,
+//   c: {
+//     x: 7,
+//     y: 4
+//   }
+// };
+
+// const newNumbers = copy(numbers);
+
+// newNumbers.a = 10;
+// newNumbers.c.x = 10;
+
+// //console.log(number);
+// //console.log(newNumbers); //это поверностная копия объектов, то есть на первом уровне
+
+// const add = {
+//   d: 17,
+//   e: 20
+// };
+
+// const clone = Object.assign({}, add); 
+
+// clone.d = 20;
+
+// // console.log(add);
+// // console.log(clone);
+
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice();
+
+// newArray[1] = 'furbv';
+
+// console.log(newArray);
+// console.log(oldArray);
+
+// //Spread
+
+// const video = ['youtube', 'vimeo', 'rutube'],
+//       blogs = ['wordpress', 'livejournal', 'blogger'],
+//       internet = [...video, ...blogs, 'vk', 'instagram', 'facebook'];
+
+// console.log(internet);
+
+// function log(a, b, c){
+//   console.log(a);
+//   console.log(b);
+//   console.log(c);
+// }
+
+// const num = [2, 5, 7];
+
+// log(...num);
+
+// const array = ['a', 'b'];
+
+// const newAarray = [...array];
+
+// const a = {
+//   one: 1,
+//   two :2
+// };
+
+// const newA = {...a};//создание копии для объектов и массивов с помощью
+//                     //spread оператора: ...
+
+// js ООП язык
+
+//console.dir([1,2,3]);//экземпляр массива
+
+"use strict";
+
+const soldier = {
+  health: 400,
+  armor: 100,
+  sayHello: function(){
+    console.log("Hello");
   }
-
-  return objCopy;
-}
-
-const numbers = {
-  a: 2,
-  b: 5,
-  c: {
-    x: 7,
-    y: 4
-  }
 };
 
-const newNumbers = copy(numbers);
-
-newNumbers.a = 10;
-newNumbers.c.x = 10;
-
-//console.log(number);
-//console.log(newNumbers); //это поверностная копия объектов, то есть на первом уровне
-
-const add = {
-  d: 17,
-  e: 20
+const jonh = {
+  health:100
 };
 
-const clone = Object.assign({}, add); 
+jonh.__proto__ = sayHello;
 
-clone.d = 20;
-
-// console.log(add);
-// console.log(clone);
-
-const oldArray = ['a', 'b', 'c'];
-const newArray = oldArray.slice();
-
-newArray[1] = 'furbv';
-
-console.log(newArray);
-console.log(oldArray);
-
-//Spread
-
-const video = ['youtube', 'vimeo', 'rutube'],
-      blogs = ['wordpress', 'livejournal', 'blogger'],
-      internet = [...video, ...blogs, 'vk', 'instagram', 'facebook'];
-
-console.log(internet);
-
-function log(a, b, c){
-  console.log(a);
-  console.log(b);
-  console.log(c);
-}
-
-const num = [2, 5, 7];
-
-log(...num);
-
-const array = ['a', 'b'];
-
-const newAarray = [...array];
-
-const a = {
-  one: 1,
-  two :2
-};
-
-const newA = {...a};//создание копии для объектов и массивов с помощью
-                    //spread оператора: ...
+console.log(jonh.armor); 
 
