@@ -316,7 +316,5 @@ const jonh = {
   health:100
 };
 
-jonh.__proto__ = sayHello;
-
 console.log(jonh.armor); 
 
