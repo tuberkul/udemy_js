@@ -304,17 +304,75 @@ console.log(typeof(answers));
 
 "use strict";
 
-const soldier = {
-  health: 400,
-  armor: 100,
-  sayHello: function(){
-    console.log("Hello");
-  }
-};
+//const soldier = {
+//   health: 400,
+//   armor: 100,
+//   sayHello: function(){
+//     console.log("Hello");
+//   }
+// };
 
-const jonh = {
-  health:100
-};
+// const jonh = {
+//   health:100
+// };
 
-console.log(jonh.armor); 
+// console.log(jonh.armor); 
+
+//динамическая типизация
+
+//1)
+//console.log(typeof(String(null)));
+//console.log(typeof(String(4)));
+
+//2)
+//console.log(typeof(5 + ''));
+
+//пример
+
+//const num = 5;
+
+//console.log("https://vk.com/catalog/" + num);
+//2 пример
+//const fontSize = 26 + 'px';
+
+//to number
+//1)
+//console.log(typeof(Number('4')));
+
+//2) унарныи плюс
+
+//console.log(typeof(+'5'));
+
+//3)
+
+//console.log(typeof(parseInt("15px", 10)));
+
+//пример
+
+//let answ = +prompt("Вопрос", "");
+
+//To boolean
+//false всегда
+//0, '', null, undefined, NaN;
+
+//пример 1)
+
+//let switcher = null;
+
+//if (switcher) {
+//  console.log('Working...');
+//}
+
+//switcher = 1;
+
+//if (switcher) {
+//  console.log('Working...');
+//}
+
+//2)
+//console.log(typeof(Boolean('4')));
+
+//3)
+//console.log(typeof(!!"44444"));
+
 
