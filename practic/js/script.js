@@ -9,50 +9,52 @@ const box = document.getElementById('box'),
 // box.style.backgroundColor = 'blue';
 // box.style.width = '500px';
 
-box.style.cssText ='background-color: blue; width: 500px;';
+console.dir(wrapper);
 
-btns[1].style.borderRadius = '100%';
-circles[0].style.backgroundColor = 'red';
+// box.style.cssText ='background-color: blue; width: 500px;';
 
-// for (let i = 0; i < hearts.length; i++){
-//     hearts[i].style.backgroundColor = 'green';
-// } не использовать!
+// btns[1].style.borderRadius = '100%';
+// circles[0].style.backgroundColor = 'red';
 
-hearts.forEach(item =>{
-    item.style.backgroundColor = 'green';
-});
+// // for (let i = 0; i < hearts.length; i++){
+// //     hearts[i].style.backgroundColor = 'green';
+// // } не использовать!
 
-const div = document.createElement('div');
-//const text = document.createTextNode('Тут был я');
+// hearts.forEach(item =>{
+//     item.style.backgroundColor = 'green';
+// });
 
-div.classList.add('black');
+// const div = document.createElement('div');
+// //const text = document.createTextNode('Тут был я');
 
-document.body.append(div);
+// div.classList.add('black');
 
-//wrapper.append(div);
+// document.body.append(div);
 
-//wrapper.prepend(div);
+// //wrapper.append(div);
 
-//hearts[0].before(div);
-//hearts[0].after(div);
+// //wrapper.prepend(div);
 
-//circles[0].remove();
+// //hearts[0].before(div);
+// //hearts[0].after(div);
 
-//hearts[0].replaceWith(circles[0]);
+// //circles[0].remove();
 
-//устаревшие команды
+// //hearts[0].replaceWith(circles[0]);
 
-//wrapper.appendChild(div);
+// //устаревшие команды
 
-//wrapper.insertBefore(div, hearts[1]);
+// //wrapper.appendChild(div);
 
-//wrapper.removeChild(hearts[1]);
+// //wrapper.insertBefore(div, hearts[1]);
 
-//wrapper.replaceChild(circles[0], hearts[0]);
+// //wrapper.removeChild(hearts[1]);
 
-div.innerHTML = "<h1>Hello World</h1>";
+// //wrapper.replaceChild(circles[0], hearts[0]);
 
-//div.textContent = "Hello"; //только текст
+// div.innerHTML = "<h1>Hello World</h1>";
 
-div.insertAdjacentHTML("afterend", "<h2>Hello</h2>");
+// //div.textContent = "Hello"; //только текст
+
+// div.insertAdjacentHTML("afterend", "<h2>Hello</h2>");
 
