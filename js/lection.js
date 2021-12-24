@@ -304,17 +304,30 @@ console.log(typeof(answers));
 
 "use strict";
 
-const soldier = {
-  health: 400,
-  armor: 100,
-  sayHello: function(){
-    console.log("Hello");
-  }
-};
+// const soldier = {
+//   health: 400,
+//   armor: 100,
+//   sayHello: function(){
+//     console.log("Hello");
+//   }
+// };
 
-const jonh = {
-  health:100
-};
+// const jonh = {
+//   health:100
+// };
 
-console.log(jonh.armor); 
+// console.log(jonh.armor); 
 
+const now = new Date();
+// console.log(now.getFullYear());
+// console.log(now.getMonth());
+// console.log(now.getDate());
+// console.log(now.getDay());
+
+
+console.log(now.getTimezoneOffset());
+
+console.log(now.getTime());
+
+console.log(now.setHours(18));
+console.log(now);
