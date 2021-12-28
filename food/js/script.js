@@ -141,4 +141,72 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     window.addEventListener('scroll', showModalByScroll);
+
+//используем классы для карточек
+
+    class MenuEveryDay {
+        constructor(imgSrc,menuType, title, description, total, parentSelector) {
+            this.imgSrc = imgSrc;
+            this.menuType = menuType;
+            this.title = title;
+            this.description = description;
+            this.cost = 'Цена:';
+            this.total = total;
+            this.parent = document.querySelector(parentSelector);
+            this.transfer = 27;
+            this.changeToUAH();
+        }
+
+        changeToUAH() {
+            this.total = this.total * this.transfer;
+        }
+
+        render() {
+            const element = document.createElement('div');
+            element.innerHTML = `
+            <div class="menu__item">
+                <img src="${this.imgSrc}" alt="${this.menuType}">
+                <h3 class="menu__item-subtitle">${this.title}</h3>
+                <div class="menu__item-descr">${this.description}</div>
+                <div class="menu__item-divider"></div>
+                <div class="menu__item-price">
+                    <div class="menu__item-cost">${this.cost}</div>
+                    <div class="menu__item-total"><span>${this.total}</span> грн/день</div>
+                </div>
+            </div>
+            `;
+
+            this.parent.append(element);
+        }
+    }
+    const descriptionMenuOne = 'Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Продукт активных и здоровых людей. Это абсолютно новый продукт с оптимальной ценой и высоким качеством!';
+    const descriptionMenuTwo = 'В меню “Премиум” мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!';
+    const descriptionMenuThree = 'Меню “Постное” - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения, молоко из миндаля, овса, кокоса или гречки, правильное количество белков за счет тофу и импортных вегетарианских стейков.';
+
+
+    new MenuEveryDay(
+        'img/tabs/vegy.jpg',
+        'vegy',
+        'Меню "Фитнес"', 
+        descriptionMenuOne, 
+        9, 
+        '.menu .container'
+        ).render();
+    new MenuEveryDay(
+        'img/tabs/elite.jpg',
+        'elite',
+        'Меню "Премиум"', 
+        descriptionMenuTwo, 
+        20,
+        '.menu .container') .render();
+
+    new MenuEveryDay(
+        'img/tabs/post.jpg',
+        'post',
+        'Меню "Постное"',
+        descriptionMenuThree,
+        17,
+        '.menu .container'
+    ).render();
+    
 });
