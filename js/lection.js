@@ -302,15 +302,21 @@ console.log(typeof(answers));
 
 //console.dir([1,2,3]);//экземпляр массива
 
-"use strict";
+// <<<<<<< setInterval_setTimeout
+// "use strict";
 
-// const soldier = {
+// // const soldier = {
+// =======
+//"use strict";
+
+//const soldier = {
 //   health: 400,
 //   armor: 100,
 //   sayHello: function(){
 //     console.log("Hello");
 //   }
 // };
+// <<<<<<< setInterval_setTimeout
 
 // const jonh = {
 //   health:100
@@ -318,16 +324,137 @@ console.log(typeof(answers));
 
 // console.log(jonh.armor); 
 
-const now = new Date();
+// const now = new Date();
 // console.log(now.getFullYear());
 // console.log(now.getMonth());
 // console.log(now.getDate());
 // console.log(now.getDay());
 
 
-console.log(now.getTimezoneOffset());
+// console.log(now.getTimezoneOffset());
 
-console.log(now.getTime());
+// console.log(now.getTime());
+// =======
+
+// const jonh = {
+//   health:100
+// };
+
+// console.log(jonh.armor); 
+
+//динамическая типизация
+
+//1)
+//console.log(typeof(String(null)));
+//console.log(typeof(String(4)));
+
+//2)
+//console.log(typeof(5 + ''));
+
+//пример
+
+//const num = 5;
+
+//console.log("https://vk.com/catalog/" + num);
+//2 пример
+//const fontSize = 26 + 'px';
+
+//to number
+//1)
+//console.log(typeof(Number('4')));
+
+//2) унарныи плюс
+
+//console.log(typeof(+'5'));
+
+//3)
+
+//console.log(typeof(parseInt("15px", 10)));
+
+//пример
+
+//let answ = +prompt("Вопрос", "");
+
+//To boolean
+//false всегда
+//0, '', null, undefined, NaN;
+
+//пример 1)
+
+//let switcher = null;
+
+//if (switcher) {
+//  console.log('Working...');
+//}
+
+//switcher = 1;
+
+//if (switcher) {
+//  console.log('Working...');
+//}
+
+//2)
+//console.log(typeof(Boolean('4')));
+
+//3)
+//console.log(typeof(!!"44444"));
+
+
+//методы перебора массивов
+
+//1) filter
+
+'use strict';
+
+// const names = ['Ivan', 'Ann', 'Ksenya', 'Voldemart'];
+
+// const shortNames = names.filter(function(name) {
+//     return name.length < 5;
+// });
+
+// console.log(shortNames);
+
+//2) map трансформирующий метод
+
+// const answers = ['IvAn', 'AnNa', 'Hello'];
+
+// const result = answers.map(item => item.toLowerCase());
+
+// console.log(result);
+
+//3) every/some
+
+// const some = [4, 'qwe', 'stbfd'];
+
+// // console.log(some.some(item => typeof(item) === 'number'));
+
+// console.log(some.every(item => typeof(item) === 'number'));
+
+//reduce
+
+// const arr = [4, 5, 1, 3, 2, 6];
+
+// const res = arr.reduce((sum, current) => sum + current);
+
+// console.log(res);
+
+// const arr = ['apple', 'pear', 'plum'];
+
+// const res = arr.reduce((sum, current) => `${sum}, ${current}`);
+// console.log(res);
+
+const obj = {
+    ivan: 'persone',
+    ann: 'persone',
+    dog: 'animal',
+    cat: 'animal'
+};
+
+const newArr = Object.entries(obj)
+.filter(item => item[1] === 'persone')
+.map(item => item[0]);
+
+console.log(newArr);
 
 console.log(now.setHours(18));
 console.log(now);
