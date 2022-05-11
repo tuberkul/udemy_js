@@ -1,0 +1,34 @@
+/* <<<<<<< parametrs_of_document
+.box {
+box-sizing: border-box;
+  width: 400px;
+  height: 350px;
+  overflow: scroll;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 10px;
+}
+button {
+  width: 100px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px; 
+======= */
+* {
+    box-sizing: border-box;
+}
+.wrapper {
+    width: 400px;
+    margin: 40px auto 0 auto;
+    border: 1px solid rgba(0,0,0, .2);
+    padding: 20px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+[type=checkbox] {
+    margin-top: 20px;
+}
