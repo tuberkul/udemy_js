@@ -302,6 +302,11 @@ console.log(typeof(answers));
 
 //console.dir([1,2,3]);//экземпляр массива
 
+// <<<<<<< setInterval_setTimeout
+// "use strict";
+
+// // const soldier = {
+// =======
 //"use strict";
 
 //const soldier = {
@@ -311,6 +316,25 @@ console.log(typeof(answers));
 //     console.log("Hello");
 //   }
 // };
+// <<<<<<< setInterval_setTimeout
+
+// const jonh = {
+//   health:100
+// };
+
+// console.log(jonh.armor); 
+
+// const now = new Date();
+// console.log(now.getFullYear());
+// console.log(now.getMonth());
+// console.log(now.getDate());
+// console.log(now.getDay());
+
+
+// console.log(now.getTimezoneOffset());
+
+// console.log(now.getTime());
+// =======
 
 // const jonh = {
 //   health:100
@@ -432,3 +456,5 @@ const newArr = Object.entries(obj)
 
 console.log(newArr);
 
+console.log(now.setHours(18));
+console.log(now);
