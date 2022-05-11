@@ -302,19 +302,235 @@ console.log(typeof(answers));
 
 //console.dir([1,2,3]);//экземпляр массива
 
-"use strict";
 
-const soldier = {
-  health: 400,
-  armor: 100,
-  sayHello: function(){
-    console.log("Hello");
-  }
+// "use strict";
+
+// const soldier = {
+
+// <<<<<<< setInterval_setTimeout
+// "use strict";
+
+// // const soldier = {
+// =======
+//"use strict";
+
+//const soldier = {
+
+//   health: 400,
+//   armor: 100,
+//   sayHello: function(){
+//     console.log("Hello");
+//   }
+// };
+// <<<<<<< setInterval_setTimeout
+
+// const jonh = {
+//   health:100
+// };
+
+// console.log(jonh.armor); 
+
+// const now = new Date();
+// console.log(now.getFullYear());
+// console.log(now.getMonth());
+// console.log(now.getDate());
+// console.log(now.getDay());
+
+
+// console.log(now.getTimezoneOffset());
+
+// console.log(now.getTime());
+// const jonh = {
+//   health:100
+// };
+
+// console.log(jonh.armor); 
+
+
+           // методы взаимодействия с DOM
+ 
+ 
+ 
+            // усторевшие но устоявшиеся //
+ 
+            // обращаемся к документу.
+ 
+ 
+            // 1) по айди.
+// 1) по айди. пишется в ковычках. шарп указывать не надо т.к. и так ясно из названия что мы ищем по id.
+//const box = document.getElementById('айди');
+ 
+ 
+// 2) по классу.
+// 2) по классу. пишется в ковычках. точку селектора указывать не надо
+// т.к. и так ясно что из названия что мы ищем по классовому селектору.
+//const box = document.getElementsByClassName('селектор');
+
+
+// 3) по обычному тэгу.
+// 3) по обычному тэгу. пишется в ковычках. просто указать имя тэга, НО, их возьмет ВСЕ тэги с таким имемен на странице
+// и вернет в переменную псевдомассив состоящий из коллекции одинаковых тегов.
+//const box = document.getElementsByTagName('тэг');
+// что бы забрать таким способом только один элемент по тэгу(два способа):
+//1 способ) надо создать всевдомассив(как выше) со всеми тегами, вывести его в консоль, посчитать под каким индексом 
+//нужный элемент(например, в коллекции он 4, значит индекс 5), и переписать вот так: 
+//const box = document.getElementsByTagName('тэг')[5];
+// возьмет только 4 элемень из коллекции всевдомассива под этим тэгом.
+//2 способ) получить коллекцию всевдомассива, НО, при использовании в коде везде подставлять индекс нужного элемента к 
+//которому хотим обратиться. пример получения и использования:
+//const box = document.getElementsByTagName('тэг');
+//console.log(box[5]);
+//получили весь псевдомассив, но в работу даем только элемент с 5 индексом из этого массива.
+
+
+
+
+// более актуальные методы //
+
+// обращаемся к документу.
+
+// 4) всех и любого
+// универсальная вещь. может забрать сразу все элементы по селектору, или тэгу, или айди.
+// можно даже по потомку и т.д. типа div>p, ul>li.list
+// как можно ещё это сделать, вот ссылка 
+// https://learn.javascript.ru/css-selectors
+// но из-за того что в названии querySelectorAll не сказано какой элемент мы хотим взять, 
+//то тут уже надо указывать # для айди и . для селектора, что бы код понял, что именно мы берем. 
+// const box = document.querySelectorAll('#box');
+// const box = document.querySelectorAll('li.list');
+//const box = document.querySelectorAll('');
+// так же возвращает в переменную псевдомассив, но уже не коллекцию, а Nodelist. 
+//что дает нам возможность использовать метод forEach() к этому всевдомассиву.
+
+
+
+
+ // 5) только первый
+//заберет только первый элемент по указаному именованию. много span'ов на странице?
+// const box = document.querySelector('span');
+// запишет в переменную только один. самый первый спэн на странице.
+//const box = document.querySelector('');
+
+
+
+
+// небольшой типс:  
+// название getelemenTbyid говорит о том, что по айдишнику мы забераем один элемент
+// а название getelementSbytagname говорит о множественном числе.
+//===
+//динамическая типизация
+
+//1)
+//console.log(typeof(String(null)));
+//console.log(typeof(String(4)));
+
+//2)
+//console.log(typeof(5 + ''));
+
+//пример
+
+//const num = 5;
+
+//console.log("https://vk.com/catalog/" + num);
+//2 пример
+//const fontSize = 26 + 'px';
+
+//to number
+//1)
+//console.log(typeof(Number('4')));
+
+//2) унарныи плюс
+
+//console.log(typeof(+'5'));
+
+//3)
+
+//console.log(typeof(parseInt("15px", 10)));
+
+//пример
+
+//let answ = +prompt("Вопрос", "");
+
+//To boolean
+//false всегда
+//0, '', null, undefined, NaN;
+
+//пример 1)
+
+//let switcher = null;
+
+//if (switcher) {
+//  console.log('Working...');
+//}
+
+//switcher = 1;
+
+//if (switcher) {
+//  console.log('Working...');
+//}
+
+//2)
+//console.log(typeof(Boolean('4')));
+
+//3)
+//console.log(typeof(!!"44444"));
+
+
+//методы перебора массивов
+
+//1) filter
+
+'use strict';
+
+// const names = ['Ivan', 'Ann', 'Ksenya', 'Voldemart'];
+
+// const shortNames = names.filter(function(name) {
+//     return name.length < 5;
+// });
+
+// console.log(shortNames);
+
+//2) map трансформирующий метод
+
+// const answers = ['IvAn', 'AnNa', 'Hello'];
+
+// const result = answers.map(item => item.toLowerCase());
+
+// console.log(result);
+
+//3) every/some
+
+// const some = [4, 'qwe', 'stbfd'];
+
+// // console.log(some.some(item => typeof(item) === 'number'));
+
+// console.log(some.every(item => typeof(item) === 'number'));
+
+//reduce
+
+// const arr = [4, 5, 1, 3, 2, 6];
+
+// const res = arr.reduce((sum, current) => sum + current);
+
+// console.log(res);
+
+// const arr = ['apple', 'pear', 'plum'];
+
+// const res = arr.reduce((sum, current) => `${sum}, ${current}`);
+// console.log(res);
+
+const obj = {
+    ivan: 'persone',
+    ann: 'persone',
+    dog: 'animal',
+    cat: 'animal'
 };
 
-const jonh = {
-  health:100
-};
+const newArr = Object.entries(obj)
+.filter(item => item[1] === 'persone')
+.map(item => item[0]);
 
-console.log(jonh.armor); 
+console.log(newArr);
 
+console.log(now.setHours(18));
+console.log(now);
