@@ -9,3 +9,15 @@ const number = 1;
 }());
 
 console.log(number);
+
+const user = (function(){
+    const privat = function() {
+        console.log('Я приватныи');
+    };
+
+    return {
+        sayHello: privat
+    };
+}());
+
+user.sayHello();
