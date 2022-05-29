@@ -519,18 +519,26 @@ console.log(typeof(answers));
 // const res = arr.reduce((sum, current) => `${sum}, ${current}`);
 // console.log(res);
 
-const obj = {
-    ivan: 'persone',
-    ann: 'persone',
-    dog: 'animal',
-    cat: 'animal'
-};
 
-const newArr = Object.entries(obj)
-.filter(item => item[1] === 'persone')
-.map(item => item[0]);
 
-console.log(newArr);
+//ЗАМЫКАНИЕ
 
-console.log(now.setHours(18));
-console.log(now);
+function createCounter() {
+  let  counter = 0;
+    const myFunction = function() {
+      counter += 1;
+      return counter;
+    }
+
+    return myFunction;
+}
+
+const increment = createCounter();
+
+const c1 = increment();
+const c2 = increment();
+const c3 = increment();
+
+console.log(c1, c2, c3);
+
+//то что выше - стандартное замыкание - в данном случае это счетчик сколько раз была вызвана функция
