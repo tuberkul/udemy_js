@@ -670,3 +670,14 @@ vanya.say();
 // for (let k of count(7)) {
 //   console.log(k);
 // }
+
+
+console.log(1);
+
+setTimeout(() => {
+  console.log('timeout');
+}, 2000)
+
+setTimeout(() => {
+  console.log('timeout-4000');
+}, 4000)
